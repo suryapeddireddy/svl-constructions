@@ -31,8 +31,14 @@ export interface CompanyHero {
 }
 
 export interface CompanyService {
+  id: string;
   title: string;
+  subtitle?: string;
+  audienceTag?: string;
   description: string;
+  deliverables: string[];
+  imageUrl: string;
+  imageAlt: string;
 }
 
 export interface CompanyProject {
@@ -41,6 +47,7 @@ export interface CompanyProject {
   location: string;
   builtUpArea: string;
   scope: string;
+  imageUrl: string;
 }
 
 export interface Company {

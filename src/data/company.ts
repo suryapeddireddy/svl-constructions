@@ -10,8 +10,7 @@ export const company: Company = {
     headline: "Engineering enduring spaces for living, working, and industry.",
     description:
       "From considered homes to commercial and industrial spaces, bring your next construction project into focus with SVL Constructions.",
-    imageUrl:
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1800&q=85",
+    imageUrl: "/images/hero/hero-architecture.jpg",
     imageAlt: "Modern concrete and glass architecture framed by greenery",
     imageCaption: "Modern concrete and glass architecture · TBD",
   },
@@ -22,12 +21,15 @@ export const company: Company = {
     { label: "About", href: "#about" },
     { label: "FAQ", href: "#faq" },
   ],
-  // TBD: Replace with real SVL Constructions data
   stats: {
-    yearsExperience: "15+",
-    builtUpAreaDelivered: "1.2M+ sq. ft.",
-    completedProjects: "40+",
-    onTimeHandover: "95%",
+    // TBD: Replace with real SVL Constructions data
+    yearsExperience: "TBD",
+    // TBD: Replace with real SVL Constructions data
+    builtUpAreaDelivered: "TBD",
+    // TBD: Replace with real SVL Constructions data
+    completedProjects: "TBD",
+    // TBD: Replace with real SVL Constructions data
+    onTimeHandover: "TBD",
   },
   // TBD: Replace with real SVL Constructions data
   contact: {
@@ -39,25 +41,65 @@ export const company: Company = {
     country: "India",
   },
   services: [
+    // TBD: Replace with real SVL Constructions data
     {
+      id: "turnkey-residential-villas",
       title: "Turnkey Residential & Villas",
+      audienceTag: "Residential",
       description:
         "End-to-end planning and construction for considered homes and private villas.",
+      deliverables: [
+        "Planning and coordinated execution",
+        "Residential structural works",
+        "Turnkey interior and finishing scope",
+      ],
+      imageUrl: "/images/services/residential-villas.jpg",
+      imageAlt: "Modern villa with clean architectural lines",
     },
+    // TBD: Replace with real SVL Constructions data
     {
+      id: "commercial-industrial",
       title: "Commercial & Industrial",
+      audienceTag: "Commercial",
       description:
         "Purpose-built spaces engineered around operational needs and long-term use.",
+      deliverables: [
+        "Commercial and industrial planning",
+        "Structural and building execution",
+        "Coordinated project handover",
+      ],
+      imageUrl: "/images/services/commercial-industrial.jpg",
+      imageAlt: "Contemporary commercial building facade",
     },
+    // TBD: Replace with real SVL Constructions data
     {
-      title: "Joint Ventures & Land Development",
+      id: "joint-ventures-land-development",
+      title: "Joint Ventures / Land Development",
+      audienceTag: "Landowners",
       description:
         "Collaborative development opportunities shaped around landowner goals.",
+      deliverables: [
+        "Land and development assessment",
+        "Collaborative scope planning",
+        "Project coordination and execution",
+      ],
+      imageUrl: "/images/services/joint-ventures.jpg",
+      imageAlt: "Aerial view of land prepared for development",
     },
+    // TBD: Replace with real SVL Constructions data
     {
+      id: "structural-civil-works",
       title: "Structural & Civil Works",
+      audienceTag: "Engineering",
       description:
         "Reliable structural and civil execution guided by sound engineering practice.",
+      deliverables: [
+        "Structural and civil construction",
+        "Site execution coordination",
+        "Progress and quality checkpoints",
+      ],
+      imageUrl: "/images/services/structural-civil.jpg",
+      imageAlt: "Civil engineering team reviewing building works",
     },
   ],
   // TBD: Replace with real SVL Constructions data
@@ -68,6 +110,7 @@ export const company: Company = {
       location: "Hyderabad, Telangana — TBD",
       builtUpArea: "TBD",
       scope: "Turnkey residential construction — TBD",
+      imageUrl: "/images/projects/project-1.jpg",
     },
     {
       title: "Urban Commercial Complex",
@@ -75,6 +118,7 @@ export const company: Company = {
       location: "Hyderabad, Telangana — TBD",
       builtUpArea: "TBD",
       scope: "Commercial construction — TBD",
+      imageUrl: "/images/projects/project-2.jpg",
     },
     {
       title: "Industrial Facility",
@@ -82,6 +126,7 @@ export const company: Company = {
       location: "Telangana — TBD",
       builtUpArea: "TBD",
       scope: "Structural and civil works — TBD",
+      imageUrl: "/images/projects/project-3.jpg",
     },
   ],
 };
