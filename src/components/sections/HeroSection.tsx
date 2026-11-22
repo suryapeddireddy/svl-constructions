@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { company } from "@/data/company";
 import HeroAudienceSelector from "@/components/sections/HeroAudienceSelector";
+import Reveal from "@/components/ui/Reveal";
 
 export default function HeroSection() {
   const { hero } = company;
@@ -8,7 +9,7 @@ export default function HeroSection() {
   return (
     <section className="bg-base">
       <div className="mx-auto grid max-w-7xl items-center gap-12 px-4 py-14 sm:px-6 sm:py-20 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16 lg:px-8 lg:py-24">
-        <div className="flex flex-col items-start">
+        <Reveal className="flex flex-col items-start">
           <p className="mb-5 text-xs font-semibold uppercase tracking-[0.18em] text-brand sm:text-sm">
             {hero.eyebrow}
           </p>
@@ -35,7 +36,7 @@ export default function HeroSection() {
           <div className="mt-9 w-full max-w-2xl">
             <HeroAudienceSelector />
           </div>
-        </div>
+        </Reveal>
 
         <figure className="w-full">
           <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-surface-border bg-surface sm:aspect-[5/4] lg:aspect-[4/5]">

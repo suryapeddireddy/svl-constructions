@@ -79,7 +79,6 @@ export default function Navbar() {
 
         <MobileNavDrawer
           links={navigation}
-          phone={contact.phone}
           phoneHref={contact.phoneHref}
           whatsappHref={contact.whatsappHref}
         />

@@ -2,29 +2,27 @@
 
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, MessageCircle, Phone, X } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useSyncExternalStore } from "react";
 import { createPortal } from "react-dom";
 import type { CompanyNavigationLink } from "@/types/company";
 
 interface MobileNavDrawerProps {
   links: CompanyNavigationLink[];
-  phone: string;
   phoneHref: string;
   whatsappHref: string;
 }
 
 export default function MobileNavDrawer({
   links,
-  phone,
   phoneHref,
   whatsappHref,
 }: MobileNavDrawerProps) {
   const [isOpen, setIsOpen] = useState(false);
-  const [isMounted, setIsMounted] = useState(false);
-
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
+  const isMounted = useSyncExternalStore(
+    () => () => {},
+    () => true,
+    () => false,
+  );
 
   useEffect(() => {
     if (!isOpen) {

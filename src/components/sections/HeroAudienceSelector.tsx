@@ -14,11 +14,19 @@ export default function HeroAudienceSelector() {
   const [selectedAudience, setSelectedAudience] =
     useState<Audience>("homeowner");
 
+  function selectAudience(audience: Audience) {
+    setSelectedAudience(audience);
+    window.dispatchEvent(
+      new CustomEvent("svl:audience-change", { detail: audience }),
+    );
+  }
+
   function requestConsultation() {
     const url = new URL(window.location.href);
     url.searchParams.set("audience", selectedAudience);
     url.hash = "contact";
     window.history.pushState(null, "", `${url.pathname}${url.search}${url.hash}`);
+    selectAudience(selectedAudience);
 
     const contactSection = document.getElementById("contact");
     if (contactSection) {
@@ -44,7 +52,7 @@ export default function HeroAudienceSelector() {
               key={audience.value}
               type="button"
               aria-pressed={isSelected}
-              onClick={() => setSelectedAudience(audience.value)}
+              onClick={() => selectAudience(audience.value)}
               className={`min-h-11 rounded-lg border px-3 py-2 text-left text-sm font-medium transition-colors ${
                 isSelected
                   ? "border-brand bg-brand-dim text-brand"

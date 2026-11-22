@@ -1,17 +1,20 @@
-export type ProjectStatus = "ongoing" | "completed";
+export type ProjectStatus = "Ongoing" | "Completed";
 
 export interface CompanyStats {
   yearsExperience: string;
-  builtUpAreaDelivered: string;
-  completedProjects: string;
-  onTimeHandover: string;
+  foundedYear: string;
+  activeCompletedProjects: string;
+  upcomingProjects: string;
 }
 
 export interface CompanyContact {
   phone: string;
   phoneHref: string;
+  whatsappNumber: string;
   whatsappHref: string;
   email: string;
+  officeAddress: string;
+  serviceRegions: string[];
   city: string;
   country: string;
 }
@@ -41,13 +44,64 @@ export interface CompanyService {
   imageAlt: string;
 }
 
+export type CommitmentIconName =
+  | "ShieldCheck"
+  | "Ruler"
+  | "HardHat"
+  | "FileCheck2";
+
+export interface CompanyCommitment {
+  id: string;
+  title: string;
+  description: string;
+  standardTag: string;
+  iconName: CommitmentIconName;
+}
+
 export interface CompanyProject {
+  id: string;
   title: string;
   status: ProjectStatus;
+  category: string;
   location: string;
   builtUpArea: string;
   scope: string;
   imageUrl: string;
+  imageAlt: string;
+}
+
+export interface CompanyProcessStep {
+  stepNumber: string;
+  title: string;
+  phaseLabel: string;
+  description: string;
+  keyOutputs: string[];
+}
+
+export type AboutIconName = "Compass" | "Building2" | "MapPin";
+
+export interface CompanyLeadershipPillar {
+  title: string;
+  description: string;
+  iconName: AboutIconName;
+}
+
+export interface CompanyAbout {
+  eyebrow: string;
+  headline: string;
+  narrative: string[];
+  experienceLabel: string;
+  foundedLabel: string;
+  regionalFootprint: string;
+  upcomingProjectsLabel: string;
+  pillars: CompanyLeadershipPillar[];
+}
+
+export interface CompanyFaq {
+  id: string;
+  question: string;
+  answer: string;
+  category: string;
 }
 
 export interface Company {
@@ -56,7 +110,11 @@ export interface Company {
   hero: CompanyHero;
   navigation: CompanyNavigationLink[];
   stats: CompanyStats;
+  about: CompanyAbout;
   contact: CompanyContact;
   services: CompanyService[];
+  commitments: CompanyCommitment[];
   projects: CompanyProject[];
+  processSteps: CompanyProcessStep[];
+  faqs: CompanyFaq[];
 }

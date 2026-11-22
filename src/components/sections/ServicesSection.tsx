@@ -1,12 +1,13 @@
 import Image from "next/image";
 import { ArrowUpRight, Check } from "lucide-react";
 import { company } from "@/data/company";
+import Reveal from "@/components/ui/Reveal";
 
 export default function ServicesSection() {
   return (
     <section id="services" className="bg-base py-20 lg:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="max-w-2xl">
+        <Reveal className="max-w-2xl">
           <p className="mb-5 text-xs font-semibold uppercase tracking-[0.18em] text-brand sm:text-sm">
             Core Capabilities
           </p>
@@ -18,9 +19,9 @@ export default function ServicesSection() {
             work, our capabilities are structured around clear scope and
             coordinated execution.
           </p>
-        </div>
+        </Reveal>
 
-        <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2">
+        <Reveal className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2">
           {company.services.map((service) => (
             <article
               key={service.id}
@@ -82,7 +83,7 @@ export default function ServicesSection() {
               </div>
             </article>
           ))}
-        </div>
+        </Reveal>
       </div>
     </section>
   );

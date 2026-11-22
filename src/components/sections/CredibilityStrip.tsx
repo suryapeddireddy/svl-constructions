@@ -1,10 +1,11 @@
 import { company } from "@/data/company";
+import Reveal from "@/components/ui/Reveal";
 
 const metrics = [
   { label: "Years of Experience", value: company.stats.yearsExperience },
-  { label: "Sq. Ft. Delivered", value: company.stats.builtUpAreaDelivered },
-  { label: "Completed Projects", value: company.stats.completedProjects },
-  { label: "On-Time Handover", value: company.stats.onTimeHandover },
+  { label: "SVL Constructions Founded", value: company.stats.foundedYear },
+  { label: "Institutional & Residential Execution", value: company.stats.activeCompletedProjects },
+  { label: "Expanding into Khammam", value: company.stats.upcomingProjects },
 ];
 
 export default function CredibilityStrip() {
@@ -14,7 +15,7 @@ export default function CredibilityStrip() {
       className="border-y border-surface-border bg-surface"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 lg:grid-cols-4">
+        <Reveal className="grid grid-cols-2 lg:grid-cols-4">
           {metrics.map((metric, index) => {
             const isPlaceholder = metric.value === "TBD";
             const separatorClass =
@@ -47,10 +48,9 @@ export default function CredibilityStrip() {
               </article>
             );
           })}
-        </div>
+        </Reveal>
         <p className="border-t border-surface-border py-3 font-sans text-xs leading-5 text-copy-muted">
-          Verified figures will replace these placeholder markers upon final
-          audit.
+          Verified leadership, founding, project, and expansion details.
         </p>
       </div>
     </section>
