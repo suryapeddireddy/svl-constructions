@@ -169,7 +169,7 @@ export default function MobileNavDrawer({
                 <a
                   href={whatsappHref}
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   className="flex min-h-12 items-center justify-center gap-2 rounded-md border border-surface-border bg-base text-sm font-semibold text-copy-primary transition-colors hover:border-brand"
                 >
                   <MessageCircle aria-hidden="true" className="size-4 text-brand" />

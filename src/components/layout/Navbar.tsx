@@ -7,7 +7,7 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-surface-border bg-base/90 backdrop-blur-md">
-      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between gap-6 px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto flex h-20 w-full max-w-7xl items-center justify-between gap-6 px-4 sm:px-6 lg:px-8">
         <Link
           href="/"
           aria-label="SVL Constructions home"
@@ -64,7 +64,7 @@ export default function Navbar() {
           <a
             href={contact.whatsappHref}
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             className="text-sm font-medium text-copy-secondary transition-colors hover:text-copy-primary"
           >
             WhatsApp

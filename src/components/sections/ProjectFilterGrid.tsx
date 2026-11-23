@@ -66,7 +66,7 @@ export default function ProjectFilterGrid({
 
       <motion.div
         layout
-        className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3"
+        className="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3 lg:gap-8"
       >
         <AnimatePresence mode="popLayout">
           {visibleProjects.map((project) => (
@@ -99,7 +99,7 @@ export default function ProjectFilterGrid({
                   </span>
                 </div>
 
-                <div className="p-6 sm:p-7">
+                <div className="p-5 sm:p-6 lg:p-8">
                   <p className="mb-3 text-xs font-semibold uppercase tracking-[0.14em] text-brand">
                     {project.category}
                   </p>

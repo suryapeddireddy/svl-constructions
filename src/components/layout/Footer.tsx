@@ -7,12 +7,12 @@ const footerLinks = [
 ];
 
 export default function Footer() {
-  const { contact } = company;
+  const { contact, leadership } = company;
 
   return (
-    <footer className="bg-dark text-bg-base">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col gap-6 border-b border-bg-base/15 py-10 sm:flex-row sm:items-center sm:justify-between lg:py-12">
+    <footer className="bg-dark pt-12 pb-8 text-bg-base">
+      <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col gap-6 border-b border-bg-base/15 pb-8 sm:flex-row sm:items-center sm:justify-between">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand">
               BUILD WITH CLARITY
@@ -29,7 +29,7 @@ export default function Footer() {
           </Link>
         </div>
 
-        <div className="grid gap-10 py-12 md:grid-cols-12 lg:gap-12">
+        <div className="grid gap-10 py-10 md:grid-cols-12 lg:gap-12">
           <div className="md:col-span-5">
             <Link
               href="/"
@@ -38,7 +38,9 @@ export default function Footer() {
               SVL Constructions
             </Link>
             <p className="mt-3 max-w-sm text-sm leading-6 text-bg-base/70">
-              18+ Years Civil Engineering Experience • Established 2024
+              {leadership.name} · {leadership.title}
+              <br />
+              {leadership.experience} · Established 2024
             </p>
           </div>
 
@@ -73,10 +75,10 @@ export default function Footer() {
                 <a
                   href={contact.whatsappHref}
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   className="transition-colors hover:text-bg-base"
                 >
-                  WhatsApp: {contact.whatsappNumber}
+                  WhatsApp: {contact.whatsappDisplay}
                 </a>
               </li>
               <li>
@@ -87,13 +89,22 @@ export default function Footer() {
                   {contact.email}
                 </a>
               </li>
-              <li>Office address: {contact.officeAddress}</li>
+              <li>
+                <a
+                  href={contact.googleMapsHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block break-words transition-colors hover:text-bg-base"
+                >
+                  Office address: {contact.officeAddress}
+                </a>
+              </li>
               <li>{contact.serviceRegions.join(" • ")}</li>
             </ul>
           </div>
         </div>
 
-        <div className="border-t border-bg-base/15 py-5 text-xs text-bg-base/60">
+        <div className="border-t border-bg-base/15 pt-6 text-xs text-bg-base/60">
           © 2026 SVL Constructions. All rights reserved.
         </div>
       </div>

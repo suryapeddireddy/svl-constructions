@@ -11,12 +11,20 @@ export interface CompanyContact {
   phone: string;
   phoneHref: string;
   whatsappNumber: string;
+  whatsappDisplay: string;
   whatsappHref: string;
   email: string;
   officeAddress: string;
+  googleMapsHref: string;
   serviceRegions: string[];
   city: string;
   country: string;
+}
+
+export interface CompanyLeadership {
+  name: string;
+  title: string;
+  experience: string;
 }
 
 export interface CompanyNavigationLink {
@@ -110,6 +118,7 @@ export interface Company {
   hero: CompanyHero;
   navigation: CompanyNavigationLink[];
   stats: CompanyStats;
+  leadership: CompanyLeadership;
   about: CompanyAbout;
   contact: CompanyContact;
   services: CompanyService[];

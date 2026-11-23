@@ -14,17 +14,17 @@ export default function CredibilityStrip() {
       aria-label="Track record and engineering credibility"
       className="border-y border-surface-border bg-surface"
     >
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <Reveal className="grid grid-cols-2 lg:grid-cols-4">
+      <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+        <Reveal className="grid grid-cols-1 gap-0 sm:grid-cols-2 lg:grid-cols-4">
           {metrics.map((metric, index) => {
             const isPlaceholder = metric.value === "TBD";
             const separatorClass =
               index === 1
-                ? "border-l border-surface-border"
+                ? "sm:border-l border-surface-border"
                 : index === 2
-                  ? "border-t border-surface-border lg:border-l lg:border-t-0"
+                  ? "border-t border-surface-border sm:border-l-0 lg:border-l lg:border-t-0"
                   : index === 3
-                    ? "border-l border-t border-surface-border lg:border-t-0"
+                    ? "border-t border-surface-border sm:border-l lg:border-t-0"
                     : "";
 
             return (

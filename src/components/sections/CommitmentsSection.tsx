@@ -20,14 +20,14 @@ export default function CommitmentsSection() {
   return (
     <section
       id="commitments"
-      className="border-y border-surface-border bg-surface py-20 lg:py-24"
+      className="border-y border-surface-border bg-surface py-14 sm:py-20"
     >
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
         <Reveal className="max-w-2xl">
           <p className="mb-5 text-xs font-semibold uppercase tracking-[0.18em] text-brand sm:text-sm">
             Engineering Standards
           </p>
-          <h2 className="font-display text-3xl font-semibold leading-tight tracking-tight text-copy-primary sm:text-4xl lg:text-5xl">
+          <h2 className="font-display text-2xl font-semibold leading-tight tracking-tight text-copy-primary sm:text-3xl lg:text-4xl">
             Execution commitments built into every stage.
           </h2>
           <p className="mt-5 max-w-xl text-base leading-7 text-copy-secondary">
@@ -36,14 +36,14 @@ export default function CommitmentsSection() {
           </p>
         </Reveal>
 
-        <Reveal className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <Reveal className="mt-10 grid grid-cols-1 gap-5 sm:mt-12 sm:grid-cols-2 sm:gap-6 lg:grid-cols-4 lg:gap-8">
           {company.commitments.map((commitment) => {
             const Icon = commitmentIcons[commitment.iconName];
 
             return (
               <article
                 key={commitment.id}
-                className="flex flex-col justify-between rounded-2xl border border-surface-border bg-base p-6"
+                className="flex flex-col justify-between rounded-2xl border border-surface-border bg-base p-5 sm:p-6 lg:p-8"
               >
                 <div>
                   <div className="flex size-12 items-center justify-center rounded-xl bg-brand-dim text-brand">

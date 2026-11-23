@@ -127,7 +127,7 @@ export default function ConsultationForm() {
     return (
       <div
         aria-live="polite"
-        className="rounded-2xl border border-surface-border bg-surface p-8"
+        className="w-full rounded-2xl border border-surface-border bg-surface p-5 sm:p-6 lg:p-8"
       >
         <div className="flex size-12 items-center justify-center rounded-full bg-brand-dim text-brand">
           <CheckCircle2 aria-hidden="true" className="size-6" strokeWidth={1.8} />
@@ -177,7 +177,7 @@ export default function ConsultationForm() {
         <a
           href={submittedInquiry.whatsappHref}
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           className="mt-6 inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-md bg-brand px-5 py-3 text-sm font-semibold text-copy-primary transition-colors hover:bg-brand/90 sm:w-auto"
         >
           <MessageCircle aria-hidden="true" className="size-4" strokeWidth={1.8} />
@@ -198,7 +198,7 @@ export default function ConsultationForm() {
     <form
       onSubmit={handleSubmit}
       noValidate
-      className="rounded-2xl border border-surface-border bg-surface p-6 sm:p-8"
+      className="w-full rounded-2xl border border-surface-border bg-surface p-5 sm:p-6 lg:p-8"
     >
       <div className="mb-7">
         <p className="text-xs font-semibold uppercase tracking-[0.16em] text-brand">
@@ -330,7 +330,7 @@ export default function ConsultationForm() {
             <a
               href={company.contact.whatsappHref}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 font-medium text-copy-secondary hover:text-copy-primary"
             >
               <MessageCircle

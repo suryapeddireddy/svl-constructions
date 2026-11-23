@@ -5,14 +5,15 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  --color-base: var(--bg-base);
   --color-bg-base: var(--bg-base);
-  --color-bg-surface: var(--bg-surface);
-  --color-bg-elevated: var(--bg-elevated);
-  --color-bg-dark: var(--bg-dark);
-  --color-text-copy-primary: var(--text-primary);
-  --color-text-copy-secondary: var(--text-secondary);
-  --color-text-copy-muted: var(--text-muted);
-  --color-border-surface-border: var(--border-default);
+  --color-surface: var(--bg-surface);
+  --color-elevated: var(--bg-elevated);
+  --color-dark: var(--bg-dark);
+  --color-copy-primary: var(--text-primary);
+  --color-copy-secondary: var(--text-secondary);
+  --color-copy-muted: var(--text-muted);
+  --color-surface-border: var(--border-default);
   --color-brand: var(--accent-primary);
   --color-brand-dim: var(--accent-primary-dim);
   --font-display: var(--font-heading);
@@ -143,8 +144,12 @@
   * {
     @apply border-border outline-ring/50;
   }
+  html,
   body {
-    @apply bg-background text-foreground;
+    @apply min-h-dvh overflow-x-clip;
+  }
+  body {
+    @apply flex flex-col bg-background text-foreground;
   }
   html {
     @apply font-sans;

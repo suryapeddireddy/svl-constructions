@@ -5,13 +5,13 @@ import Reveal from "@/components/ui/Reveal";
 
 export default function ServicesSection() {
   return (
-    <section id="services" className="bg-base py-20 lg:py-28">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section id="services" className="bg-base py-14 sm:py-20">
+      <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
         <Reveal className="max-w-2xl">
           <p className="mb-5 text-xs font-semibold uppercase tracking-[0.18em] text-brand sm:text-sm">
             Core Capabilities
           </p>
-          <h2 className="font-display text-3xl font-semibold leading-tight tracking-tight text-copy-primary sm:text-4xl lg:text-5xl">
+          <h2 className="font-display text-2xl font-semibold leading-tight tracking-tight text-copy-primary sm:text-3xl lg:text-4xl">
             Construction expertise across every scale.
           </h2>
           <p className="mt-5 max-w-xl text-base leading-7 text-copy-secondary">
@@ -21,7 +21,7 @@ export default function ServicesSection() {
           </p>
         </Reveal>
 
-        <Reveal className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2">
+        <Reveal className="mt-10 grid grid-cols-1 gap-5 sm:mt-12 sm:grid-cols-2 sm:gap-6 lg:gap-8">
           {company.services.map((service) => (
             <article
               key={service.id}
@@ -38,7 +38,7 @@ export default function ServicesSection() {
                   />
                 </div>
 
-                <div className="p-6 sm:p-8">
+                <div className="p-5 sm:p-6 lg:p-8">
                   {service.audienceTag && (
                     <p className="mb-4 inline-flex rounded-full bg-brand-dim px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.12em] text-brand">
                       {service.audienceTag}
