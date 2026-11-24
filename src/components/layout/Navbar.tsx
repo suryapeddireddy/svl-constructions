@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { company } from "@/data/company";
+import BrandLogo from "@/components/ui/BrandLogo";
 import MobileNavDrawer from "@/components/layout/MobileNavDrawer";
 
 export default function Navbar() {
@@ -11,32 +12,9 @@ export default function Navbar() {
         <Link
           href="/"
           aria-label="SVL Constructions home"
-          className="flex shrink-0 items-center gap-3"
+          className="flex shrink-0 items-center"
         >
-          <span className="flex size-11 items-center justify-center rounded-md border border-surface-border bg-surface text-brand">
-            <svg
-              aria-hidden="true"
-              viewBox="0 0 32 32"
-              fill="none"
-              className="size-7"
-            >
-              <path
-                d="M5 26V13L16 5L27 13V26M10 26V16H22V26M14 26V20H18V26"
-                stroke="currentColor"
-                strokeWidth="1.7"
-                strokeLinecap="square"
-                strokeLinejoin="miter"
-              />
-            </svg>
-          </span>
-          <span className="flex flex-col leading-none">
-            <span className="font-display text-lg font-bold tracking-tight text-copy-primary">
-              SVL
-            </span>
-            <span className="mt-1 text-[0.6rem] font-semibold tracking-[0.19em] text-copy-secondary">
-              CONSTRUCTIONS
-            </span>
-          </span>
+          <BrandLogo className="h-12 w-auto text-copy-primary" />
         </Link>
 
         <nav

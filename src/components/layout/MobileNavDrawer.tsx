@@ -2,8 +2,10 @@
 
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, MessageCircle, Phone, X } from "lucide-react";
+import Link from "next/link";
 import { useEffect, useState, useSyncExternalStore } from "react";
 import { createPortal } from "react-dom";
+import BrandLogo from "@/components/ui/BrandLogo";
 import type { CompanyNavigationLink } from "@/types/company";
 
 interface MobileNavDrawerProps {
@@ -104,32 +106,14 @@ export default function MobileNavDrawer({
           >
             <div>
               <div className="flex items-center justify-between border-b border-surface-border pb-5">
-                <div className="flex items-center gap-3">
-                  <span className="flex size-11 items-center justify-center rounded-md border border-surface-border bg-surface text-brand">
-                    <svg
-                      aria-hidden="true"
-                      viewBox="0 0 32 32"
-                      fill="none"
-                      className="size-7"
-                    >
-                      <path
-                        d="M5 26V13L16 5L27 13V26M10 26V16H22V26M14 26V20H18V26"
-                        stroke="currentColor"
-                        strokeWidth="1.7"
-                        strokeLinecap="square"
-                        strokeLinejoin="miter"
-                      />
-                    </svg>
-                  </span>
-                  <div className="flex flex-col leading-none">
-                    <span className="font-display text-lg font-bold tracking-tight text-copy-primary">
-                      SVL
-                    </span>
-                    <span className="mt-1 text-[0.6rem] font-semibold tracking-[0.19em] text-copy-secondary">
-                      CONSTRUCTIONS
-                    </span>
-                  </div>
-                </div>
+                <Link
+                  href="/"
+                  aria-label="SVL Constructions home"
+                  onClick={closeDrawer}
+                  className="flex items-center"
+                >
+                  <BrandLogo className="h-14 w-auto text-copy-primary" />
+                </Link>
                 <button
                   type="button"
                   aria-label="Close navigation menu"

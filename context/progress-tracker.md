@@ -6,20 +6,20 @@
 - Scope: Establish project and UI specifications, agent instructions, typography, SEO metadata, semantic design tokens, and typed company placeholder data.
 - Completed milestones: Project context specifications and agent workflow instructions; foundation files and typed placeholder data; successful production build.
 - Verification: `npm run build` completed successfully with no TypeScript or CSS errors.
-- Reference refinement: Homepage flow and component boundaries were updated after reviewing jkassociatesonline.com; Phase 2 implementation remains unstarted.
+- Reference refinement: Homepage flow and component boundaries were updated after reviewing jkassociatesonline.com.
 - Remaining: None for Phase 1.
 
 ## Phase 2 — Shared Site Shell
 
-- Status: In progress — Blocks 1 and 2 complete.
+- Status: Complete.
 - Scope: Implement the shared navigation and responsive site shell, then compose the conversion-led homepage from focused Server Component sections and small interactive leaves.
 - Completed milestones: Shared sticky glass navbar shell with typed centralized navigation links, desktop contact actions, and animated mobile drawer; architectural hero with audience-aware early consultation selector.
 - Verification: `npm run build` completed successfully with no TypeScript or CSS errors. Responsive navbar validation confirmed a portal-based architectural drawer below 1024px and direct desktop navigation from 1024px upward.
-- Remaining: Homepage sections and remaining shared site shell work.
+- Remaining: None.
 
 ## Phase 3 — Corporate Story and Services
 
-- Status: In progress — Blocks 3, 4, and 8 complete.
+- Status: Complete.
 - Scope: Implement the credibility strip, company story, and service capabilities.
 - Completed milestones: Block 3 — track-record and engineering credibility strip with unverified figures replaced by visible TBD placeholders. Block 4 — core capabilities and services grid with centralized typed service data, Unsplash image placeholders, deliverable lists, and the homepage composition insertion.
 - Verification: Block 4 `npm run build` completed successfully with no TypeScript or CSS errors.
@@ -27,7 +27,7 @@
 - Verification: Image downloads passed JPEG/non-empty validation above 20KB; `npm run build` completed successfully with no local image or TypeScript errors.
 - Completed milestone: Block 8 — integrated verified SVL company metrics, the three real active/completed projects with TBD built-up areas, and the engineering story/About section.
 - Verification: Block 8 `npm run build` completed successfully with no TypeScript or CSS errors.
-- Remaining: Final consultation and launch-readiness work.
+- Remaining: None.
 
 ## Phase 4 — Projects and Execution
 
@@ -62,3 +62,22 @@
 - Verification: `npm run build` and `npm run lint` passed. Browser checks at 375px, 768px, and 1440px confirmed visible section headings, correct surface/footer contrast, all nine homepage sections, no horizontal overflow or section gaps, and all images loaded.
 - Completed milestone: Verified and centralized the complete SVL office address and Google Maps destination in typed company data; linked address displays in the closing contact section and footer, and added matching Organization/PostalAddress JSON-LD metadata in the root layout.
 - Verification: Browser content checks confirmed the complete address in both contact and footer links. `npm run lint` and `npm run build` completed successfully with zero errors.
+- Completed milestone: Consultation form WhatsApp handoff — submission formats project type, name, phone, location, and scope details into a direct WhatsApp URL using the official contact number, opens WhatsApp immediately in a new tab, and shows confirmation actions for retrying WhatsApp or calling directly; no API route or environment configuration was added.
+- Verification: `npm run lint` and `npm run build` completed successfully with zero errors.
+- Completed milestone: Final pre-deployment verification — confirmed sitewide phone, WhatsApp, email, and Maps links; verified the complete office address and encoded Maps search URL; checked all company image references against local assets; replaced the non-resolving hardcoded Vercel domain with Vercel production/deployment URL resolution and a local-only development fallback; confirmed SEO metadata uses SVL Constructions branding.
+- Verification: Final `npm run lint` and `npm run build` completed successfully with zero warnings or errors.
+- Completed milestone: Updated the design system and project UI documentation to SVL's Cerulean / Steel Blue, deep navy-slate, white, and cool light-slate palette; adjusted accent-filled controls for high contrast.
+- Verification: `npm run build` completed successfully with no TypeScript or CSS errors.
+- Completed milestone: Added a reusable SVG SVL brand mark with the geometric wordmark, architectural spire, blue swoosh arcs, and optional official tagline; integrated it into the desktop navigation, mobile drawer, and footer.
+- Verification: `npm run build` completed successfully with no TypeScript or CSS errors.
+- Completed milestone: Centralized the official SVL CONSTRUCTIONS name, tagline, proprietor details, phone/WhatsApp number, email, registered address, and Maps URL; updated direct-contact actions and Organization structured data to use the official details.
+- Verification: `npm run build` completed successfully with no TypeScript or CSS errors.
+- Completed milestone: Final brand and contact verification — checked the mobile and desktop logo placements, footer contrast, current phone and WhatsApp links, and address displays against the official business card.
+- Verification: `npm run lint` and `npm run build` passed. Browser checks at 375px and 1440px showed no horizontal overflow; all inspected contact links use the official number and address.
+
+## Documentation
+
+- Status: Complete.
+- Scope: Replace the default Next.js README with an engineering-grade, SVL Constructions-specific repository guide.
+- Completed milestone: Documented the corporate positioning, key platform features, verified tech stack, repository architecture, local development commands, Vercel deployment notes, and official company contact details.
+- Verification: README content checked against `CLAUDE.md`, `package.json`, `src/app/globals.css`, `src/data/company.ts`, and the repository's implementation overview.

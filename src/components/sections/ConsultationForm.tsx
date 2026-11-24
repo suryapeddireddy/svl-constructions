@@ -22,7 +22,7 @@ const audiences = [
 type Audience = (typeof audiences)[number]["value"];
 
 interface InquirySummary {
-  audience: string;
+  projectType: string;
   name: string;
   phone: string;
   location: string;
@@ -100,21 +100,21 @@ export default function ConsultationForm() {
     const selectedLabel =
       audiences.find((audience) => audience.value === selectedAudience)?.label ??
       audiences[0].label;
-    const inquiryDetails = [
+    const message = [
       "Hello SVL Constructions, I would like to discuss a project.",
       `Project type: ${selectedLabel}`,
       `Name: ${name}`,
       `Phone / WhatsApp: ${phone}`,
       `Plot / site location: ${location}`,
-      scope ? `Brief scope: ${scope}` : "",
+      `Brief scope: ${scope || "Not provided"}`,
     ]
-      .filter(Boolean)
       .join("\n");
-    const whatsappUrl = new URL(company.contact.whatsappHref);
-    whatsappUrl.searchParams.set("text", inquiryDetails);
+    const whatsappUrl = `https://wa.me/${company.contact.whatsappNumber}?text=${encodeURIComponent(message)}`;
+
+    window.open(whatsappUrl, "_blank", "noopener,noreferrer");
 
     setSubmittedInquiry({
-      audience: selectedLabel,
+      projectType: selectedLabel,
       name,
       phone,
       location,
@@ -143,7 +143,7 @@ export default function ConsultationForm() {
           <div>
             <dt className="text-copy-muted">Project type</dt>
             <dd className="mt-1 font-medium text-copy-primary">
-              {submittedInquiry.audience}
+              {submittedInquiry.projectType}
             </dd>
           </div>
           <div>
@@ -171,18 +171,32 @@ export default function ConsultationForm() {
                 {submittedInquiry.scope}
               </dd>
             </div>
-          ) : null}
+          ) : (
+            <div className="sm:col-span-2">
+              <dt className="text-copy-muted">Brief scope note</dt>
+              <dd className="mt-1 font-medium text-copy-primary">Not provided</dd>
+            </div>
+          )}
         </dl>
 
-        <a
-          href={submittedInquiry.whatsappHref}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mt-6 inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-md bg-brand px-5 py-3 text-sm font-semibold text-copy-primary transition-colors hover:bg-brand/90 sm:w-auto"
-        >
-          <MessageCircle aria-hidden="true" className="size-4" strokeWidth={1.8} />
-          Continue on WhatsApp
-        </a>
+        <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+          <a
+            href={submittedInquiry.whatsappHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-md bg-brand px-5 py-3 text-sm font-semibold text-bg-base transition-colors hover:bg-brand/90 sm:w-auto"
+          >
+            <MessageCircle aria-hidden="true" className="size-4" strokeWidth={1.8} />
+            Open WhatsApp to Send Message
+          </a>
+          <a
+            href={company.contact.phoneHref}
+            className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-md border border-surface-border bg-base px-5 py-3 text-sm font-semibold text-copy-primary transition-colors hover:bg-elevated sm:w-auto"
+          >
+            <Phone aria-hidden="true" className="size-4" strokeWidth={1.8} />
+            Call {company.contact.phone}
+          </a>
+        </div>
         <button
           type="button"
           onClick={() => setSubmittedInquiry(null)}
@@ -344,9 +358,9 @@ export default function ConsultationForm() {
         </p>
         <button
           type="submit"
-          className="inline-flex min-h-12 items-center justify-center gap-2 rounded-md bg-brand px-5 py-3 text-sm font-semibold text-copy-primary transition-colors hover:bg-brand/90"
+          className="inline-flex min-h-12 items-center justify-center gap-2 rounded-md bg-brand px-5 py-3 text-sm font-semibold text-bg-base transition-colors hover:bg-brand/90"
         >
-          Prepare inquiry
+          Submit / Send Pre-Inquiry
           <Send aria-hidden="true" className="size-4" strokeWidth={1.8} />
         </button>
       </div>

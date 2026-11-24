@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { company } from "@/data/company";
+import BrandLogo from "@/components/ui/BrandLogo";
 
 const footerLinks = [
   ...company.navigation,
@@ -14,7 +15,7 @@ export default function Footer() {
       <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col gap-6 border-b border-bg-base/15 pb-8 sm:flex-row sm:items-center sm:justify-between">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand">
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-bg-base/80">
               BUILD WITH CLARITY
             </p>
             <h2 className="mt-3 font-display text-2xl font-semibold tracking-tight sm:text-3xl">
@@ -23,7 +24,7 @@ export default function Footer() {
           </div>
           <Link
             href="#contact"
-            className="inline-flex min-h-12 shrink-0 items-center justify-center rounded-md bg-brand px-5 py-3 text-sm font-semibold text-copy-primary transition-colors hover:bg-brand/90"
+            className="inline-flex min-h-12 shrink-0 items-center justify-center rounded-md bg-brand px-5 py-3 text-sm font-semibold text-bg-base transition-colors hover:bg-brand/90"
           >
             Request a consultation
           </Link>
@@ -33,9 +34,13 @@ export default function Footer() {
           <div className="md:col-span-5">
             <Link
               href="/"
-              className="font-display text-2xl font-semibold tracking-tight"
+              aria-label="SVL Constructions home"
+              className="inline-flex"
             >
-              SVL Constructions
+              <BrandLogo
+                showTagline
+                className="h-20 w-auto text-bg-base"
+              />
             </Link>
             <p className="mt-3 max-w-sm text-sm leading-6 text-bg-base/70">
               {leadership.name} · {leadership.title}
@@ -105,7 +110,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-bg-base/15 pt-6 text-xs text-bg-base/60">
-          © 2026 SVL Constructions. All rights reserved.
+          © 2026 {company.name}. All rights reserved.
         </div>
       </div>
     </footer>

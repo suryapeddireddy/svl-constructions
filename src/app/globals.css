@@ -10,11 +10,13 @@
   --color-surface: var(--bg-surface);
   --color-elevated: var(--bg-elevated);
   --color-dark: var(--bg-dark);
+  --color-dark-elevated: var(--bg-dark-elevated);
   --color-copy-primary: var(--text-primary);
   --color-copy-secondary: var(--text-secondary);
   --color-copy-muted: var(--text-muted);
   --color-surface-border: var(--border-default);
   --color-brand: var(--accent-primary);
+  --color-brand-secondary: var(--accent-secondary);
   --color-brand-dim: var(--accent-primary-dim);
   --font-display: var(--font-heading);
   --color-background: var(--background);
@@ -60,16 +62,18 @@
 
 :root {
   --bg-base: #FFFFFF;
-  --bg-surface: #F8F7F4;
-  --bg-elevated: #F1EFEA;
-  --bg-dark: #111827;
-  --border-default: #E5E7EB;
-  --border-subtle: #D6D3CD;
-  --text-primary: #111827;
-  --text-secondary: #4B5563;
-  --text-muted: #6B7280;
-  --accent-primary: #B45309;
-  --accent-primary-dim: rgba(180, 83, 9, 0.10);
+  --bg-surface: #F5F8FA;
+  --bg-elevated: #EAF1F5;
+  --bg-dark: #0F2537;
+  --bg-dark-elevated: #162C3D;
+  --border-default: #DCE5EB;
+  --border-subtle: #C8D6E0;
+  --text-primary: #0F2537;
+  --text-secondary: #40586A;
+  --text-muted: #5B7180;
+  --accent-primary: #0B69A3;
+  --accent-secondary: #1377B6;
+  --accent-primary-dim: rgba(11, 105, 163, 0.10);
   --state-success: #15803D;
 
   --background: var(--bg-base);

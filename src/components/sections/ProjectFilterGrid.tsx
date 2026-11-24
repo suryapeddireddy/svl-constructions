@@ -45,7 +45,7 @@ export default function ProjectFilterGrid({
               onClick={() => setActiveFilter(filter)}
               className={`inline-flex items-center gap-2 rounded-full border px-5 py-2.5 text-sm font-semibold transition-colors ${
                 isActive
-                  ? "border-brand bg-brand text-copy-primary"
+                  ? "border-brand bg-brand text-bg-base"
                   : "border-surface-border bg-surface text-copy-secondary hover:border-brand/50 hover:text-copy-primary"
               }`}
             >

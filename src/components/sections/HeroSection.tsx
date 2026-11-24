@@ -21,7 +21,7 @@ export default function HeroSection() {
           <div className="mt-8 flex flex-wrap items-center gap-3">
             <a
               href="#contact"
-              className="inline-flex min-h-12 items-center justify-center rounded-md bg-brand px-5 py-3 text-sm font-semibold text-copy-primary transition-colors hover:bg-brand/90"
+              className="inline-flex min-h-12 items-center justify-center rounded-md bg-brand px-5 py-3 text-sm font-semibold text-bg-base transition-colors hover:bg-brand/90"
             >
               Request a Consultation
             </a>

@@ -67,7 +67,7 @@ export default function HeroAudienceSelector() {
       <button
         type="button"
         onClick={requestConsultation}
-        className="mt-4 inline-flex min-h-12 w-full items-center justify-center rounded-md bg-brand px-5 py-3 text-sm font-semibold text-copy-primary transition-colors hover:bg-brand/90 sm:w-auto"
+        className="mt-4 inline-flex min-h-12 w-full items-center justify-center rounded-md bg-brand px-5 py-3 text-sm font-semibold text-bg-base transition-colors hover:bg-brand/90 sm:w-auto"
       >
         Request a Consultation
       </button>

@@ -114,6 +114,7 @@ export interface CompanyFaq {
 
 export interface Company {
   name: string;
+  tagline: string;
   positioningStatement: string;
   hero: CompanyHero;
   navigation: CompanyNavigationLink[];

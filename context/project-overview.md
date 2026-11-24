@@ -2,7 +2,7 @@
 
 ## Website scope
 
-Build a high-trust corporate website for SVL Constructions, an Indian civil engineering, residential, and commercial construction firm. The site should communicate engineering discipline, reliable execution, and clear paths to consultation. The visual direction combines generous architectural whitespace, crisp editorial typography, warm stone and slate surfaces, deep charcoal ink, a restrained brass/amber accent, and subtle motion.
+Build a high-trust corporate website for SVL Constructions, an Indian civil engineering, residential, and commercial construction firm. The site should communicate engineering discipline, reliable execution, and clear paths to consultation. The visual direction combines generous architectural whitespace, crisp editorial typography, clean white and cool light-slate surfaces, deep navy-slate ink, Cerulean / Steel Blue accents, and subtle motion.
 
 Use jkassociatesonline.com as a reference for its conversion-oriented journey: a clear opening proposition, an early consultation path, scannable proof and service cards, a legible project process, credible work examples, answers to common questions, and a repeated closing CTA. Translate those patterns into SVL's more corporate, architectural voice; do not copy its wording, layout details, brand assets, offers, or claims.
 

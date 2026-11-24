@@ -21,7 +21,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const title = "SVL Constructions | Engineering Spaces for Life";
+const title = `${company.name} | Engineering Spaces for Life`;
 const description =
   "SVL Constructions delivers residential, commercial, industrial, and civil engineering projects with a focus on quality, safety, and reliable execution.";
 
@@ -30,12 +30,14 @@ const organizationJsonLd = {
   "@type": "Organization",
   name: company.name,
   url: siteUrl.toString(),
+  telephone: company.contact.phone,
+  email: company.contact.email,
   address: {
     "@type": "PostalAddress",
     streetAddress: company.contact.officeAddress,
     addressLocality: "Hyderabad",
     addressRegion: "Telangana",
-    postalCode: "500052",
+    postalCode: "501218",
     addressCountry: "IN",
   },
   hasMap: company.contact.googleMapsHref,
@@ -45,11 +47,11 @@ export const metadata: Metadata = {
   metadataBase: siteUrl,
   title,
   description,
-  applicationName: "SVL Constructions",
+  applicationName: company.name,
   openGraph: {
     title,
     description,
-    siteName: "SVL Constructions",
+    siteName: company.name,
     locale: "en_IN",
     type: "website",
   },

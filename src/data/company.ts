@@ -2,13 +2,14 @@ import type { Company } from "@/types/company";
 
 /*
  * Launch placeholder checklist:
- * [ ] Office address
+ * [x] Office address
  * [ ] Built-up areas for all project entries
  * [ ] Real site photos for hero, services, projects, and about imagery
  */
 
 export const company: Company = {
-  name: "SVL Constructions",
+  name: "SVL CONSTRUCTIONS",
+  tagline: "WE VALUE YOUR NEED",
   positioningStatement:
     "Engineering enduring spaces for living, working, and industry.",
   // TBD: Replace with real SVL Constructions data
@@ -35,15 +36,15 @@ export const company: Company = {
     upcomingProjects: "2 Upcoming Projects",
   },
   leadership: {
-    name: "Srinivasula Reddy",
-    title: "Founder / Principal Civil Engineer",
-    experience: "18+ years of civil engineering experience",
+    name: "P. Srinivasula Reddy",
+    title: "Proprietor / Principal Civil Engineer",
+    experience: "18+ Years Experience",
   },
   about: {
     eyebrow: "ENGINEERING LEGACY",
     headline: "Field experience translated into disciplined execution.",
     narrative: [
-      "Founded by Srinivasula Reddy, Principal Civil Engineer, SVL Constructions brings 18+ years of civil engineering field expertise into every project. The company was formally established in 2024 to deliver considered residential and institutional construction.",
+      "Led by P. Srinivasula Reddy, Civil Engineer with 18+ years of experience, SVL Constructions brings practical civil engineering expertise into every project. The company was formally established in 2024 to deliver considered residential and institutional construction.",
       "Hands-on structural supervision connects planning with site execution across institutional work in Jammalamadugu and custom villa construction in Shamshabad. The company is now preparing to expand with 2 upcoming projects in Khammam.",
     ],
     experienceLabel: "18+ Years Civil Engineering Experience",
@@ -73,17 +74,17 @@ export const company: Company = {
     ],
   },
   contact: {
-    phone: "+91 63098 61208",
-    phoneHref: "tel:+916309861208",
-    whatsappNumber: "916309861208",
-    whatsappDisplay: "+91 63098 61208",
+    phone: "+91 80086 96864",
+    phoneHref: "tel:+918008696864",
+    whatsappNumber: "918008696864",
+    whatsappDisplay: "+91 80086 96864",
     whatsappHref:
-      "https://wa.me/916309861208?text=Hello%20Srinivasula%20Reddy%2C%20I%20would%20like%20to%20discuss%20a%20construction%20project%20with%20SVL%20Constructions.",
+      "https://wa.me/918008696864?text=Hello%20P.%20Srinivasula%20Reddy%2C%20I%20would%20like%20to%20discuss%20a%20construction%20project%20with%20SVL%20Constructions.",
     email: "svlconstructions1969@gmail.com",
     officeAddress:
-      "Tower A-801, Sumadhura's Gardens By The Brook, Sathamrai Village, Shamshabad, Gaganpahad, Hyderabad, Telangana 500052",
+      "D.No. 4-252/4, Velankini Nagar, Exit 16, Shamshabad Bangalore Road, Hyderabad, Ranga Reddy Dist, Telangana - 501218",
     googleMapsHref:
-      "https://www.google.com/maps/search/?api=1&query=Sumadhura%27s+Gardens+By+The+Brook,+Sathamrai+Village,+Shamshabad,+Gaganpahad,+Hyderabad,+Telangana+500052",
+      "https://www.google.com/maps/search/?api=1&query=Velankini+Nagar,+Exit+16,+Shamshabad+Bangalore+Road,+Hyderabad,+Telangana+501218",
     // TBD: Replace with real SVL Constructions data
     serviceRegions: [
       "Shamshabad",
