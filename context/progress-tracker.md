@@ -74,6 +74,8 @@
 - Verification: `npm run build` completed successfully with no TypeScript or CSS errors.
 - Completed milestone: Final brand and contact verification — checked the mobile and desktop logo placements, footer contrast, current phone and WhatsApp links, and address displays against the official business card.
 - Verification: `npm run lint` and `npm run build` passed. Browser checks at 375px and 1440px showed no horizontal overflow; all inspected contact links use the official number and address.
+- Completed milestone: Motion polish — added a shared animated status pill for project filters, reduced-motion-aware project image hover zoom, and a connected four-step process timeline with staggered scroll reveals.
+- Verification: `npm run lint` and `npm run build` passed. Browser checks confirmed status filter counts, all four timeline steps, no mobile horizontal overflow, and hover zoom disabled when reduced motion is requested.
 
 ## Documentation
 

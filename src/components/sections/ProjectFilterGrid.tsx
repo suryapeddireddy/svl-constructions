@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, MotionConfig, motion } from "framer-motion";
 import { ArrowUpRight, Layers, MapPin, Maximize2 } from "lucide-react";
 import { useState } from "react";
 import type { CompanyProject, ProjectStatus } from "@/types/company";
@@ -43,15 +43,29 @@ export default function ProjectFilterGrid({
               type="button"
               aria-pressed={isActive}
               onClick={() => setActiveFilter(filter)}
-              className={`inline-flex items-center gap-2 rounded-full border px-5 py-2.5 text-sm font-semibold transition-colors ${
+              className={`relative isolate inline-flex items-center gap-2 rounded-full border px-5 py-2.5 text-sm font-semibold transition-colors ${
                 isActive
-                  ? "border-brand bg-brand text-bg-base"
+                  ? "border-brand text-bg-base"
                   : "border-surface-border bg-surface text-copy-secondary hover:border-brand/50 hover:text-copy-primary"
               }`}
             >
-              {filter}
+              {isActive ? (
+                <MotionConfig reducedMotion="user">
+                  <motion.span
+                    aria-hidden="true"
+                    layoutId="active-project-filter"
+                    transition={{
+                      type: "spring",
+                      stiffness: 420,
+                      damping: 34,
+                    }}
+                    className="absolute inset-0 rounded-full bg-brand"
+                  />
+                </MotionConfig>
+              ) : null}
+              <span className="relative z-10">{filter}</span>
               <span
-                className={`rounded-full px-2 py-0.5 text-xs ${
+                className={`relative z-10 rounded-full px-2 py-0.5 text-xs ${
                   isActive
                     ? "bg-base/70 text-copy-primary"
                     : "bg-elevated text-copy-muted"
@@ -77,7 +91,7 @@ export default function ProjectFilterGrid({
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -12 }}
               transition={{ duration: 0.24, ease: "easeOut" }}
-              className="flex flex-col justify-between overflow-hidden rounded-2xl border border-surface-border bg-surface transition-colors hover:border-brand/50"
+              className="group flex flex-col justify-between overflow-hidden rounded-2xl border border-surface-border bg-surface transition-colors hover:border-brand/50"
             >
               <div>
                 <div className="relative aspect-[4/3] overflow-hidden border-b border-surface-border bg-elevated">
@@ -86,7 +100,7 @@ export default function ProjectFilterGrid({
                     alt={project.imageAlt}
                     fill
                     sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
-                    className="object-cover"
+                    className="object-cover transition-transform duration-500 ease-out motion-reduce:transition-none motion-safe:group-hover:scale-[1.04]"
                   />
                   <span
                     className={`absolute left-4 top-4 rounded-full px-3 py-1.5 text-xs font-semibold ${

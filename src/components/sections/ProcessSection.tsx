@@ -1,5 +1,5 @@
-import { CheckCircle2 } from "lucide-react";
 import { company } from "@/data/company";
+import ProcessTimeline from "@/components/sections/ProcessTimeline";
 import Reveal from "@/components/ui/Reveal";
 
 export default function ProcessSection() {
@@ -22,45 +22,7 @@ export default function ProcessSection() {
           </p>
         </Reveal>
 
-        <Reveal className="mt-10 grid grid-cols-1 gap-5 sm:mt-12 sm:grid-cols-2 sm:gap-6 lg:grid-cols-4 lg:gap-8">
-          {company.processSteps.map((step) => (
-            <article
-              key={step.stepNumber}
-              className="flex flex-col justify-between rounded-2xl border border-surface-border bg-base p-5 sm:p-6 lg:p-8"
-            >
-              <div>
-                <div className="flex size-12 items-center justify-center rounded-xl bg-brand-dim text-brand">
-                  <span className="font-semibold">{step.stepNumber}</span>
-                </div>
-                <p className="mt-6 text-xs font-semibold uppercase tracking-[0.12em] text-copy-muted">
-                  {step.phaseLabel}
-                </p>
-                <h3 className="mt-3 font-display text-xl font-semibold leading-snug text-copy-primary">
-                  {step.title}
-                </h3>
-                <p className="mt-3 text-sm leading-6 text-copy-secondary">
-                  {step.description}
-                </p>
-              </div>
-
-              <ul className="mt-6 space-y-3">
-                {step.keyOutputs.map((output) => (
-                  <li
-                    key={output}
-                    className="flex items-start gap-2 text-sm leading-5 text-copy-secondary"
-                  >
-                    <CheckCircle2
-                      aria-hidden="true"
-                      className="mt-0.5 size-4 shrink-0 text-brand"
-                      strokeWidth={1.8}
-                    />
-                    <span>{output}</span>
-                  </li>
-                ))}
-              </ul>
-            </article>
-          ))}
-        </Reveal>
+        <ProcessTimeline steps={company.processSteps} />
       </div>
     </section>
   );
