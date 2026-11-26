@@ -3,6 +3,7 @@ import CredibilityStrip from "@/components/sections/CredibilityStrip";
 import ServicesSection from "@/components/sections/ServicesSection";
 import CommitmentsSection from "@/components/sections/CommitmentsSection";
 import ProjectsSection from "@/components/sections/ProjectsSection";
+import CostEstimatorSection from "@/components/sections/CostEstimatorSection";
 import ProcessSection from "@/components/sections/ProcessSection";
 import AboutSection from "@/components/sections/AboutSection";
 import FAQSection from "@/components/sections/FAQSection";
@@ -16,6 +17,7 @@ export default function Home() {
       <ServicesSection />
       <CommitmentsSection />
       <ProjectsSection />
+      <CostEstimatorSection />
       <ProcessSection />
       <AboutSection />
       <FAQSection />

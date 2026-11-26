@@ -25,6 +25,7 @@ export const company: Company = {
   navigation: [
     { label: "Services", href: "#services" },
     { label: "Projects", href: "#projects" },
+    { label: "Cost Estimator", href: "#calculator" },
     { label: "Process", href: "#process" },
     { label: "About", href: "#about" },
     { label: "FAQ", href: "#faq" },
