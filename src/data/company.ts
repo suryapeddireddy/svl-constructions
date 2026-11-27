@@ -207,6 +207,46 @@ export const company: Company = {
       // TBD: Replace with real SVL Constructions data
       builtUpArea: "TBD",
       scope: "Civil & Structural Execution",
+      clientType: "Institutional",
+      scopeSummary: "Institutional Building Civil & Structural Execution",
+      // TBD: Verify specifications against approved drawings and site records.
+      structuralSpecs: [
+        "RCC framed structure with project-approved concrete grades",
+        "Reinforcement detailing coordinated with structural drawings",
+        "Footings, columns, beams, and slabs executed to approved design",
+        "Wet-area and roof waterproofing per project requirements",
+      ],
+      gallery: [
+        // SWAP_PHOTO: Replace with a verified Jammalamadugu school site photo.
+        {
+          src: "/images/projects/project-1.jpg",
+          caption: "Institutional project image placeholder",
+          stage: "Project overview",
+        },
+      ],
+      // TBD: Confirm recorded milestone statuses and notes before publishing.
+      progressTimeline: [
+        {
+          stage: "Foundation & Plinth",
+          status: "Completed",
+          note: "Foundation and plinth milestone; confirm site records.",
+        },
+        {
+          stage: "RCC Columns & Slab Casting",
+          status: "Completed",
+          note: "RCC frame milestone; confirm site records.",
+        },
+        {
+          stage: "Brickwork, Plastering & MEP",
+          status: "Completed",
+          note: "Building services and wall finishes; confirm site records.",
+        },
+        {
+          stage: "Elevation & Interior Finishing",
+          status: "Completed",
+          note: "Final finishing milestone; confirm site records.",
+        },
+      ],
       imageUrl: "/images/projects/project-1.jpg",
       imageAlt: "Institutional school building project",
     },
@@ -219,6 +259,46 @@ export const company: Company = {
       // TBD: Replace with real SVL Constructions data
       builtUpArea: "TBD",
       scope: "End-to-End Villa Construction",
+      clientType: "Residential",
+      scopeSummary: "Turnkey Structural & Architectural Execution",
+      // TBD: Verify specifications against approved drawings and site records.
+      structuralSpecs: [
+        "RCC framed structure with project-approved concrete grades",
+        "Footing and column reinforcement per approved structural drawings",
+        "RCC beam and slab execution coordinated with floor plans",
+        "Terrace and wet-area waterproofing per project requirements",
+      ],
+      gallery: [
+        // SWAP_PHOTO: Replace with a verified Shamshabad Villa I site photo.
+        {
+          src: "/images/projects/project-2.jpg",
+          caption: "Residential project image placeholder",
+          stage: "Project overview",
+        },
+      ],
+      // TBD: Confirm recorded milestone statuses and notes before publishing.
+      progressTimeline: [
+        {
+          stage: "Foundation & Plinth",
+          status: "Completed",
+          note: "Foundation and plinth milestone; confirm site records.",
+        },
+        {
+          stage: "RCC Columns & Slab Casting",
+          status: "In Progress",
+          note: "RCC frame milestone; confirm current site stage.",
+        },
+        {
+          stage: "Brickwork, Plastering & MEP",
+          status: "Upcoming",
+          note: "Wall and service works; sequence to be confirmed.",
+        },
+        {
+          stage: "Elevation & Interior Finishing",
+          status: "Upcoming",
+          note: "Finishing milestone; scope to be confirmed.",
+        },
+      ],
       imageUrl: "/images/projects/project-2.jpg",
       imageAlt: "Independent residential villa in Shamshabad",
     },
@@ -231,8 +311,150 @@ export const company: Company = {
       // TBD: Replace with real SVL Constructions data
       builtUpArea: "TBD",
       scope: "Structural & Turnkey Execution",
+      clientType: "Residential",
+      scopeSummary: "Residential Structural & Turnkey Execution",
+      // TBD: Verify specifications against approved drawings and site records.
+      structuralSpecs: [
+        "RCC framed structure with project-approved concrete grades",
+        "Footing and column reinforcement per approved structural drawings",
+        "RCC beam and slab execution coordinated with floor plans",
+        "Terrace and wet-area waterproofing per project requirements",
+      ],
+      gallery: [
+        // SWAP_PHOTO: Replace with a verified Shamshabad Villa II site photo.
+        {
+          src: "/images/projects/project-3.jpg",
+          caption: "Residential project image placeholder",
+          stage: "Project overview",
+        },
+      ],
+      // TBD: Confirm recorded milestone statuses and notes before publishing.
+      progressTimeline: [
+        {
+          stage: "Foundation & Plinth",
+          status: "Completed",
+          note: "Foundation and plinth milestone; confirm site records.",
+        },
+        {
+          stage: "RCC Columns & Slab Casting",
+          status: "In Progress",
+          note: "RCC frame milestone; confirm current site stage.",
+        },
+        {
+          stage: "Brickwork, Plastering & MEP",
+          status: "Upcoming",
+          note: "Wall and service works; sequence to be confirmed.",
+        },
+        {
+          stage: "Elevation & Interior Finishing",
+          status: "Upcoming",
+          note: "Finishing milestone; scope to be confirmed.",
+        },
+      ],
       imageUrl: "/images/projects/project-3.jpg",
       imageAlt: "Independent residential villa construction in Shamshabad",
+    },
+    {
+      id: "upcoming-khammam-project-i",
+      title: "Upcoming Project I",
+      status: "Upcoming",
+      category: "Project Details To Be Confirmed",
+      location: "Khammam, Telangana",
+      // TBD: Confirm project type, scope, and built-up area with SVL.
+      builtUpArea: "TBD",
+      scope: "Project scope to be confirmed",
+      clientType: "Residential",
+      scopeSummary: "Project scope to be confirmed with SVL Constructions",
+      // TBD: Confirm project type and specifications before publishing.
+      structuralSpecs: [
+        "Structural system to be confirmed after project assessment",
+        "Concrete grades to be confirmed against approved drawings",
+        "Foundation design to be confirmed after site and soil assessment",
+      ],
+      gallery: [
+        // SWAP_PHOTO: Replace with a verified Khammam Project I site photo.
+        {
+          src: "/images/projects/project-4.jpg",
+          caption: "Illustrative portfolio image; project photo to be confirmed",
+          stage: "Project preview",
+        },
+      ],
+      // Upcoming project milestones remain indicative until the scope is set.
+      progressTimeline: [
+        {
+          stage: "Foundation & Plinth",
+          status: "Upcoming",
+          note: "Sequence and scope to be confirmed.",
+        },
+        {
+          stage: "RCC Columns & Slab Casting",
+          status: "Upcoming",
+          note: "Structural design to be confirmed.",
+        },
+        {
+          stage: "Brickwork, Plastering & MEP",
+          status: "Upcoming",
+          note: "Project requirements to be confirmed.",
+        },
+        {
+          stage: "Elevation & Interior Finishing",
+          status: "Upcoming",
+          note: "Finishing scope to be confirmed.",
+        },
+      ],
+      imageUrl: "/images/projects/project-4.jpg",
+      imageAlt: "Illustrative project image placeholder",
+    },
+    {
+      id: "upcoming-khammam-project-ii",
+      title: "Upcoming Project II",
+      status: "Upcoming",
+      category: "Project Details To Be Confirmed",
+      location: "Khammam, Telangana",
+      // TBD: Confirm project type, scope, and built-up area with SVL.
+      builtUpArea: "TBD",
+      scope: "Project scope to be confirmed",
+      clientType: "Residential",
+      scopeSummary: "Project scope to be confirmed with SVL Constructions",
+      // TBD: Confirm project type and specifications before publishing.
+      structuralSpecs: [
+        "Structural system to be confirmed after project assessment",
+        "Concrete grades to be confirmed against approved drawings",
+        "Foundation design to be confirmed after site and soil assessment",
+      ],
+      gallery: [
+        // SWAP_PHOTO: Replace with a verified Khammam Project II site photo.
+        {
+          src: "/images/projects/project-5.jpg",
+          caption: "Illustrative portfolio image; project photo to be confirmed",
+          stage: "Project preview",
+        },
+      ],
+      // Upcoming project milestones remain indicative until the scope is set.
+      progressTimeline: [
+        {
+          stage: "Foundation & Plinth",
+          status: "Upcoming",
+          note: "Sequence and scope to be confirmed.",
+        },
+        {
+          stage: "RCC Columns & Slab Casting",
+          status: "Upcoming",
+          note: "Structural design to be confirmed.",
+        },
+        {
+          stage: "Brickwork, Plastering & MEP",
+          status: "Upcoming",
+          note: "Project requirements to be confirmed.",
+        },
+        {
+          stage: "Elevation & Interior Finishing",
+          status: "Upcoming",
+          note: "Finishing scope to be confirmed.",
+        },
+      ],
+      imageUrl: "/images/projects/project-5.jpg",
+      imageAlt: "Illustrative project image placeholder",
     },
   ],
   // TBD: Replace with real SVL Constructions data

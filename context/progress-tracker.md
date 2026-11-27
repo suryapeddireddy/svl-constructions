@@ -78,6 +78,8 @@
 - Verification: `npm run lint` and `npm run build` passed. Browser checks confirmed status filter counts, all four timeline steps, no mobile horizontal overflow, and hover zoom disabled when reduced motion is requested.
 - Completed milestone: Added an interactive residential construction cost and BOQ estimator with Hyderabad/Telangana indicative specification tiers, square-yard/square-foot conversion, floor and coverage assumptions, optional site-work allowances, stage-wise ranges, and a pre-filled WhatsApp BOQ request. Integrated the section between Projects and Process and added Cost Estimator to the shared navigation.
 - Verification: `npm run lint` and `npm run build` passed. Production browser checks at 360px and 1440px confirmed no horizontal overflow, responsive unit conversion, live area/cost updates from floor/tier/add-on selections, and Cost Estimator links in mobile and desktop navigation.
+- Completed milestone: Expanded the project data model with case-study scope, structural specifications, local photo placeholders, and four site milestones; added TBD-marked upcoming Khammam entries; and connected each project card to an accessible, mobile-scrollable case-study modal with keyboard dismissal, focus handling, photo gallery support, visual progress, and a project-specific WhatsApp CTA.
+- Verification: `npm run lint` and `npm run build` completed successfully with zero warnings or errors. `git diff --check` passed.
 
 ## Documentation
 

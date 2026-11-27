@@ -3,7 +3,8 @@
 import Image from "next/image";
 import { AnimatePresence, MotionConfig, motion } from "framer-motion";
 import { ArrowUpRight, Layers, MapPin, Maximize2 } from "lucide-react";
-import { useState } from "react";
+import { useCallback, useState } from "react";
+import ProjectCaseStudyModal from "@/components/sections/ProjectCaseStudyModal";
 import type { CompanyProject, ProjectStatus } from "@/types/company";
 
 type ProjectFilter = "All" | ProjectStatus;
@@ -18,6 +19,9 @@ export default function ProjectFilterGrid({
   projects,
 }: ProjectFilterGridProps) {
   const [activeFilter, setActiveFilter] = useState<ProjectFilter>("All");
+  const [selectedProject, setSelectedProject] =
+    useState<CompanyProject | null>(null);
+  const closeCaseStudy = useCallback(() => setSelectedProject(null), []);
   const visibleProjects =
     activeFilter === "All"
       ? projects
@@ -177,12 +181,27 @@ export default function ProjectFilterGrid({
                       </div>
                     </div>
                   </dl>
+                  <div className="mt-6 border-t border-surface-border pt-5">
+                    <button
+                      type="button"
+                      onClick={() => setSelectedProject(project)}
+                      className="inline-flex min-h-11 w-full items-center justify-center rounded-xl bg-brand px-4 py-3 text-sm font-semibold text-base transition-colors hover:bg-brand-secondary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+                    >
+                      View Case Study &amp; Site Stages
+                    </button>
+                  </div>
                 </div>
               </div>
             </motion.article>
           ))}
         </AnimatePresence>
       </motion.div>
+      {selectedProject ? (
+        <ProjectCaseStudyModal
+          project={selectedProject}
+          onClose={closeCaseStudy}
+        />
+      ) : null}
     </div>
   );
 }

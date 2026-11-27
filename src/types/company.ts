@@ -1,4 +1,26 @@
-export type ProjectStatus = "Ongoing" | "Completed";
+export type ProjectStatus = "Ongoing" | "Completed" | "Upcoming";
+
+export type ProjectClientType =
+  | "Residential"
+  | "Institutional"
+  | "Commercial";
+
+export interface ProjectGalleryImage {
+  src: string;
+  caption: string;
+  stage: string;
+}
+
+export type ProjectProgressStatus =
+  | "Completed"
+  | "In Progress"
+  | "Upcoming";
+
+export interface ProjectProgressStage {
+  stage: string;
+  status: ProjectProgressStatus;
+  note: string;
+}
 
 export interface CompanyStats {
   yearsExperience: string;
@@ -74,6 +96,11 @@ export interface CompanyProject {
   location: string;
   builtUpArea: string;
   scope: string;
+  clientType: ProjectClientType;
+  scopeSummary: string;
+  structuralSpecs: string[];
+  gallery: ProjectGalleryImage[];
+  progressTimeline: ProjectProgressStage[];
   imageUrl: string;
   imageAlt: string;
 }
